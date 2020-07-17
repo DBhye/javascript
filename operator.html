@@ -13,9 +13,19 @@
         2.증감연산자 (++,--) <br>
         - 증감연산자 : 변수의 앞 또는 뒤에 ++붙여 사용, 전위증가연산자, 후위증가연산자<br>
         - 감소연산자 : 변수의 앞 또는 뒤에 --붙여 사용, 전위감소연산자, 후위감소연산자<br>
-        3. 비교(관계)연산자 : > , >= , < , <= , ==, !=, === , !== (자바스크립트에서 추가)<br>
-        - 결과가 논리값 형태로 표현, true 또는 false
-        <script>
+        3. 비교(관계)연산자 : > , >= , < , <= , ==(equal), !=, 
+        - === , !== (자바스크립트에서 추가)<br>
+        - 결과가 논리값 형태로 표현, true 또는 false를 출력<br>
+        4. 논리연산자 : &&(논리 AND, 논리곱), ||(논리 OR, 논리합), ! (논리 NOT,논리부정)<br>
+        - 논리연산자의 결과는 논리값(TRUE, FALSE 둘중의 하나)<br>
+        - 비교연산자가 논리연산자보다 우선임 비교 > 논리<br>
+        - 논리 AND가 논리 OR보다 우선임.<br>
+        
+        5. 대입연산자 : =
+        복합대입연산자(할당연산자,assignment : += -= *= /= %=)
+        
+  <script>
+
             var a = 30, b =10, c;
             c = a + b;
             console.log("a + b =" + c);
@@ -50,11 +60,49 @@
         console.log("a <= b = " + (a<=b));
         console.log("a == b = " + (a==b));
         console.log("a != b = " + (a!=b));
-            // === !== : 값과 타입을 한꺼번에 비교
+        // === !== : 값과 타입을 한꺼번에 비교
+        
         a = "30"; b = 30;
-        console.log(a == b); //문자열과 숫자를 비교할 때 문자열의 숫자값을 꺼내서 숫자와 비교
-        console.log(a === b);   // 값과 타입을 모두 비교하여 일치할 때 true 가 되고, 하나라도 다르면 false가 된다.
+        console.log(a == b); 
+        //문자열과 숫자를 비교할 때 문자열의 숫자값을 꺼내서 숫자와 비교
+        console.log(a === b);   
+        // 값과 타입을 모두 비교하여 일치할 때 true 가 되고, 하나라도 다르면 false가 된다.
+
+        //!== 로 비교 : 값과 타입을 모두 비교
+        console.log("a !== b :"  +(a !== b)); //true, 값은 같지만 타입은 다르기 때문에 다름.
+
+        //!= 로 비교 : 값만 비교, 문자열의 값을 꺼내서 비교
+        console.log("a != b :" + (a != b)); //false
+
+        //논리 연산자
+        //&& : 모두가 true 일때 전체 결과가 true 가 됨.
+        var x = 30, y = 10;
+        console.log(x>20 && y<20); //true
+        console.log(x>20 && y>20); //false
+        console.log(x<20 && y>20); //false
+
+        // ||: 둘중의 하나라도 true가 있다면, 전체 결과는 true가 됨.
+        console.log(x>20 || y<20); // 하나라도 true 면 true
+        console.log(x>20 || y>20); //true
+        console.log(x<20 || y>20); //false
+        // ! : true를 false, false를 true로 변경함.
+        var z = true; //논리형(boolean)
+        console.log(z); // true
+        console.log(!30); //false,0을 제외한 모든 숫자는 true, 이것의 부정이므로 false
+        consolelg.log(!"javascript"); // false, 모든 문자열은 true, 이것의 부정이므로 false
+
+        // 대입, 복합대입연산자 : += -= *= /= %=
+        a = 10;
+        //a = a+5;
+        a+= 5;
+        console.log(a);
+
+        ++a; console.log(a);
+        a++; console.log(a);
+        a = a + 1; console.log(a);
+        a+=1; console.log(a); 
         </script>
-    </p>
-</body>
+
+       
+    </p>/body>
 </html>

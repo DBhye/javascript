@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {width:150px;}
+    </style>
+</head>
+<body>
+    <!-- 확인 창으로부터 메세지를 전달받아 전등의 점/소등을 결정하는 여부 를 변수에 저장,
+        그 값으로부터 전등의 점등소등 여부를 브라우저 화면에 메세지와 함께 이미지를 출력 
+    * 입력창 : prompt() - 값을 입력받는 함수
+        경고창, 알림창 : alert() -경고, 알림, 결과를 보여주는 함수
+        확인창 : confirm() - 확인버튼, 취소버튼을 클릭하는 함수
+        -확인을 누르면 ture 입력되고, 취소누르면 false 입력되는 함수
+        document.write() - 브라우저 화면으로 결과를 출력, 다양한 형식의 태그, 아이디, 속성을 모두 사용가능
+    -->
+
+    <script>
+            var onOff = confirm("전등을 켜시겠습니까?");
+
+            if(onOff==true) {
+                document.write("<img src='켜짐.png'>");
+            } else if(onOff==false) {
+            document.write("<img src='꺼짐.png'>");
+            } 
+    </script>
+</body>
+</html>
