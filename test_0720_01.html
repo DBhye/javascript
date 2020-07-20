@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0720 1번</title>
+</head>
+<body>
+    <!-- 입력창으로부터 정수를 입력받아 홀수,짝수 여부를 판별하는 프로그램 
+    메세지 : 정수를 입력해주세요
+    ex) 5 ->결과화면 5는 홀수입니다. 10->10은 짝수입니다. -->
+        <script>
+            var num = prompt("정수를 입력해주세요.")
+            
+            var s= (num % 2 == 0 ? (num+'은 짝수입니다.'):(num+'은 홀수입니다.'));
+            document.write(s);
+        </script>
+</body>
+</html>

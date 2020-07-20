@@ -6,21 +6,19 @@
     <title>p57 체중 관리 프로그램</title>
 </head>
 <body>
-    <!-- 
-        1.입력창을 통해서 이름(name), 키 (height), 몸무게(weight) 3개의 값을 입력받아 변수에 저장
-        2. 표준 몸무게 (키 - 100) * 0.9
-     -->
-     <script>
-         var name=prompt("당신의 이름은?");
-         var userHeight = prompt("당신의 신장은?"); //신장
-         var userWeight = prompt("당신의 몸무게는?"); //체중
 
-         //평균체중
-         var normal=(userHeight - 100) * 0.9;
-         var result = userWeight>=normal - 5 && userWeight<=normal + 5;
-         result = result ? "적정체중입니다." : "적정 체중이 아닙니다.";
-         document.write(name + "님은"+result);
-     </script>
-</body>
+        <script>
+            var price1 = prompt("교통비를 입력하세요(원).");
+            var price2 = prompt("식비를 입력하세요(원).");
+            var price3 = prompt("음료비를 입력하세요(원).");
+    
+            var price_sum = parseInt(price1) + parseInt(price2) + parseInt(price3);
+    
+            var s = (price_sum>10000) ? ((price_sum-10000)+"원 초과했어요!") : ("돈 관리를 잘 했어요!");
+            document.write(s);
+        </script>
+    </body>
+  
+
 
 </html>

@@ -6,15 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-    var price1 = prompt("교통비 입력");
-    var price2 = prompt("식비 입력");
-    var price3 = prompt("음료비 입력");
-    var sum= number(price1) + number(price2) + number(price3);
-    var result = sum>10000
-    if(result) {
-        document.write(sum-10000 + "원 초과");
-    } else {document.log("돈 관리 잘했어요!");}
-</script>
-</body>
+    <body>
+        <script>
+            var name = prompt("이름을 입력하세요.");
+            var height = prompt("키를 입력하세요(cm).");
+            var weight = prompt("몸무게를 입력하세요(kg).");
+            var avg_weight = (height - 100) * 0.9;
+            var s = (weight-avg_weight>5 || weight-avg_weight<-5) ? ("적정 체중이 아닙니다.") : ("적정 체중입니다.");
+            document.write(name + "님은 " + s);
+        </script>
+    </body>
+
+
 </html>
