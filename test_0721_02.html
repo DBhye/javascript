@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--출력 : 평균점수, 학점을 출력(A : 90점 이상, B: 80~89, C: 70 ~79, D: 60 ~ 69, F:60점 미만)-->
+    <script>
+        var num1 = Number(prompt("국어점수 입력"));
+        var num2 = Number(prompt("영어점수 입력"));
+        var num3 = Number(prompt("수학점수 입력"));
+
+       var avg_num = ((num1+num2+num3)/3).toFixed(0);;
+       switch(avg_num) {
+           case 90: case 91: case 92: case 93: case 94: case 95: case 96: case 97: case 98: case 99: case 100:
+           document.write("학점:A"+"점수 : "+avg_num);
+            break;
+            case 80: case 81: case 82: case 83: case 84: case 85: case 86: case 87: case 88: case 89:
+           document.write("학점:B"+"점수 : "+avg_num);
+            break;
+            case 70: case 71: case 72: case 73: case 74: case 75: case 76: case 77: case 78: case 79:
+           document.write("학점:C"+"점수 : "+avg_num);
+            break;
+            case 60: case 61: case 62: case 63: case 64: case 65: case 66: case 67: case 68: case 69:
+           document.write("학점:D"+"점수 : "+avg_num);
+            break;
+            default:
+            document.write("학점:F"+"점수 : "+avg_num);
+
+       }
+    </script>
+</body>
+</html>

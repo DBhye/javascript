@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 입력창으로부터 정수를 입력받아 입력받은 수의 팩토리얼을 출력 
+        입력: 정수입력 : 5
+        출력:5! = 5 * 4 * 3 * 2 * 1 = 120 -->
+        <script>
+            var num = Number(prompt("정수 입력"));
+            
+            document.write(num+"!"+"=");
+           
+            for(var i = num; i>0; i--) {
+                document.write(i);
+                
+               if(i>1) {
+                   document.write("*");
+               }
+               
+            } document.write("="+sum);
+        </script>
+</body>
+</html>
