@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dan {display: inline-block; padding: 20px; margin: 15px; line-height: 30px;}
+        h3 {text-align: center;}
+    </style>
+</head>
+<body>
+    <!-- 단입력 받아 해당하는 단에 대한 구구단을 출력한다.
+    단 전체는 div 구성, 단 제목은 h3, display는 inline-block , padding 20px, margin:15px , 줄간격 : 30px -->
+
+    <script>
+        var num = Number(prompt("구구단의 단을 입력하시오"));
+        document.write("<div class='dan'>");
+        document.write("<h3>"+num+"단"+"</h3>");
+
+        for(var i=1; i<=9; i++) {
+            document.write(num+"*"+i+"="+num*i+"<br>");
+        }
+        document.write("</div>");
+    </script>
+</body>
+</html>

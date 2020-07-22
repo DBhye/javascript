@@ -11,5 +11,24 @@
     출력: 약수 : 1 2 5 10
     약수의 갯수 : 4개
     약수의 합 : 18 -->
+    <script>
+        var num = Number(prompt("정수 입력"));
+        var cnt = 0;
+        var sum = 0;
+     document.write("약수 :");
+        for(var i=1; i<=num; i++) {
+        
+            if(num%i==0) {
+                if(i!=1){
+                    document.write(", ");
+                }
+                document.write(i);
+                cnt++;
+                sum+=i;
+            }   
+        }
+        document.write("<br>약수의 갯수 :"+cnt+"개");
+        document.write("<br>약수의 합 :"+sum);
+    </script>
 </body>
 </html>
