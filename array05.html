@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2차원 배열의 활용</title>
+    <style>
+        body {font-size: 20px;}
+        tr, td {border: 1px solid black; }
+    </style>
+</head>
+<body>
+    <script>
+    var student = new Array(
+        Array("이익준","컴공",88,76),
+        Array("양석형","컴공",70,83),
+        Array("채송화","컴공",92,95),
+        Array("안정원","컴공",85,92),
+        Array("김준완","컴공",97,88),
+    );
+    /*
+    for(var i=0; i<student.length; i++){
+        var sum=0;
+        var avg=0;
+        document.write(student[i][0]+ " 학생의 중간고사 점수:" +student[i][2]+","+student[i][0]+ " 학생의 기말고사 점수:"+student[i][3]);
+        for(var z=2; z<student[i].length; z++) {
+           
+            sum+=student[i][z];
+            avg=sum/2
+           
+        } document.write(", "+"총점: "+sum);
+        document.write(", "+"평균: "+avg.toFixed(2)+"<br>");
+
+    }
+*/
+    document.write('<table>');
+        
+    for(var i=0; i<student.length; i++) {
+        document.write('<tr>');
+
+        var sum=0;
+        var avg=0;
+
+            for(var z=2; z<student[i].length; z++) {
+                document.write('<td>');
+            document.write(student[i][z]);
+            
+            sum+=student[i][z];
+            avg=sum/2
+            document.write(sum)
+            document.write(avg+'</td>');
+        
+               
+            }  
+           
+            document.write('</tr>');
+            
+            
+           
+    };
+    document.write('</table>');
+    </script>
+</body>
+</html>

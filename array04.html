@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>타이틀</title>
+    <style>
+        body {font-size: 20px;}
+    </style>
+</head>
+<body>
+    <script>
+    var score = [
+    [95, 88, 76, 64, 73],
+    [78,63,57,92],
+    [77,82,67,63,81,82],
+    ];
+
+    //확인
+    document.write(score + "<br>");
+    document.write("score의행의 갯수 : "+score.length + "<br>");
+    document.write("0번 행 열의 갯수 :" + score[0].length + "<br>");
+    document.write("1번 행 열의 갯수 :" + score[1].length + "<br>");
+    document.write("2번 행 열의 갯수 :" + score[2].length + "<br>");
+    document.write("-----------"+"<br>");
+    //기본for문
+    var sum;
+    var avg;
+    for(var i=0; i<score.length; i++) {
+        sum=0;
+        avg=0;
+        for(var z=0; z<score[i].length; z++){
+        sum+=score[i][z];
+       avg=score[i].length;
+        }  document.write((i+1)+"반 합계: "+sum); 
+        document.write((i+1)+"반 평균: "+(sum/avg).toFixed(2)+"<br>"); 
+    } 
+    //2차원 배열 만드는 2번 방법
+    var score = new Array (
+        Array(95, 83, 76, 64, 73),
+        Array(78,63,57,92),
+    );
+</script>
+</body>
+</html>
