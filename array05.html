@@ -7,24 +7,30 @@
     <style>
         body {font-size: 20px;}
         tr, td {border: 1px solid black; }
-        table{border: 1px solid black; border-collapse: collapse; width: 1000px;}
-        th{border: 1px solid black; background-color: violet;}
+        table{border: 1px solid black; border-collapse: collapse; width: 600px;
+            background: #DD5E89;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #F7BB97, #DD5E89);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #F7BB97, #DD5E89); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ }
+        th{border: 1px solid black; width:100px}
+        td {text-align: center;}
         </style>
 </head>
 <body>
     <script>
     var student = new Array(
         Array("이익준","컴공",88,76),
-        Array("양석형","컴공",70,83),
+        Array("양석형","자동차",70,83),
         Array("채송화","컴공",92,95),
-        Array("안정원","컴공",85,92),
-        Array("김준완","컴공",97,88),
+        Array("안정원","전기",85,92),
+        Array("김준완","전자",97,88),
+        Array("이인성","기계",78,92),
     );
-    /*
+    
     for(var i=0; i<student.length; i++){
         var sum=0;
         var avg=0;
-        document.write(student[i][0]+ " 학생의 중간고사 점수:" +student[i][2]+","+student[i][0]+ " 학생의 기말고사 점수:"+student[i][3]);
+        document.write(student[i][0]+ " 학생의 중간고사 점수:" +student[i][2]+","+"기말고사 점수:"+student[i][3]);
         for(var z=2; z<student[i].length; z++) {
            
             sum+=student[i][z];
@@ -34,31 +40,37 @@
         document.write(", "+"평균: "+avg.toFixed(2)+"<br>");
 
     }
-*/
+    document.write("-------------------------------------------"+'<br>')
     document.write('<table>');
-        document.write('<tr>');
-        document.write('<th>'+"중간"+'</th>');
-        document.write('<th>'+"기말"+'</th>');
-        document.write('<th>'+"합계"+'</th>');
-        document.write('<th>'+"평균"+'</th>');
-        document.write('</tr>');
+    document.write('<tr>');
+    document.write('<th>'+'이름'+'</th>');
+    document.write('<th>'+'학과'+'</th>');
+    document.write('<th>'+"중간"+'</th>');
+    document.write('<th>'+"기말"+'</th>');
+    document.write('<th>'+"합계"+'</th>');
+    document.write('<th>'+"평균"+'</th>');
+    document.write('</tr>');
     for(var i=0; i<student.length; i++) {
-        document.write('<tr>');
-
         var sum=0;
         var avg=0;
-
-            for(var z=2; z<student[i].length; z++) {
-            document.write('<td>');
+        document.write('<tr>');
+        document.write('<td>');
+        document.write(student[i][0]);
+        document.write('</td>');
+        document.write('<td>');
+        document.write(student[i][1]);
+        document.write('</td>');
+        for(var z=2; z<student[i].length; z++) {       
+            document.write('<td>');           
             document.write(student[i][z]);
             document.write('</td>');
             sum+=student[i][z];
-          
-            }   avg=sum/2 
-            document.write('<td>'+sum+'</td>');
-            document.write('<td>'+avg+'</td>');
-    
-            document.write('</tr>');  
+        
+        }   
+        avg=sum/2 
+        document.write('<td>'+sum+'</td>');
+        document.write('<td>'+avg+'</td>');
+        document.write('</tr>');  
            
     };
     document.write('</table>');
