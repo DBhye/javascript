@@ -7,7 +7,9 @@
     <style>
         body {font-size: 20px;}
         tr, td {border: 1px solid black; }
-    </style>
+        table{border: 1px solid black; border-collapse: collapse; width: 1000px;}
+        th{border: 1px solid black; background-color: violet;}
+        </style>
 </head>
 <body>
     <script>
@@ -34,7 +36,12 @@
     }
 */
     document.write('<table>');
-        
+        document.write('<tr>');
+        document.write('<th>'+"중간"+'</th>');
+        document.write('<th>'+"기말"+'</th>');
+        document.write('<th>'+"합계"+'</th>');
+        document.write('<th>'+"평균"+'</th>');
+        document.write('</tr>');
     for(var i=0; i<student.length; i++) {
         document.write('<tr>');
 
@@ -42,20 +49,16 @@
         var avg=0;
 
             for(var z=2; z<student[i].length; z++) {
-                document.write('<td>');
+            document.write('<td>');
             document.write(student[i][z]);
-            
+            document.write('</td>');
             sum+=student[i][z];
-            avg=sum/2
-            document.write(sum)
-            document.write(avg+'</td>');
-        
-               
-            }  
-           
-            document.write('</tr>');
-            
-            
+          
+            }   avg=sum/2 
+            document.write('<td>'+sum+'</td>');
+            document.write('<td>'+avg+'</td>');
+    
+            document.write('</tr>');  
            
     };
     document.write('</table>');
