@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<style>
+    img {width:80px;}
+</style>
+
+
+<script>
+ var user = prompt("가위, 바위, 보 중에 입력하세요.");
+ var user_int;
+
+var ran = Math.floor(Math.random() * 3);
+ 
+if(user == "가위") {
+    user_int=1;
+   
+    if(ran == user_int) {
+        document.write("비겼습니다.");
+    } else if (ran=3) {
+        document.write("이겼습니다.");
+    }   else {
+        document.write("졌습니다.");
+    }
+    
+}
+else if(user == "바위") {
+    user_int=2;
+       
+        if(ran == user_int) {
+            document.write("비겼습니다.");
+        } else if (ran=3) {
+            document.write("졌습니다.");
+        }   else {
+            document.write("이겼습니다.");
+        }
+    
+}
+else if(user == "보") {
+    user_int=3;
+    
+        if(ran == user_int) {
+            document.write("비겼습니다.");
+        } else if (ran=1) {
+            document.write("졌습니다.");
+        }   else {
+            document.write("이겼습니다.");
+        }
+    }
+
+document.write("<br>컴퓨터가 낸 것 : " + "<img src='js_images1/ch06/math_img_"+ran+".jpg'>");
+("<img src='stone0" + n + ".png'><br>");
+</script>
+</body>
+</html>

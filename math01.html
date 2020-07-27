@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Math 객체 사용 방법
+        //1.abs() 절대값(양수)
+        document.write(Math.abs(-10)+"<br>");
+        document.write(Math.abs(-10)+"<br>");
+        //2. max() : 나열된 값 중에서 최대값을 구함.
+
+        document.write(Math.max(21,35,42.37, 55, 68, 77, "135") + "<br>");
+        //3. min() :나열된 값 중에서 최솟값을 구함.
+        document.write(Math.min(35,55,30.77,29,28,"27.7", "thirty")+"<br>");
+        //4.
+        document.write(Math.pow(2, 3) + "<br>");
+        document.write(Math.pow(3.3, 5) + "<br>");    
+        document.write(Math.pow(3.3, 5.5) + "<br>");
+        //5. 0 ~ 10 까지의 난수
+        document.write(parseInt(Math.random() * 11)); 
+        // 1 ~ 10
+        document.write(parseInt(Math.random() * 10)+1);
+
+        // 범위 사이의 난수 : -20 ~20 사이의 난수 
+        var rn1 = Math.random()* (20(-20)+1) + (-20);
+        
+        //6.반올림
+        document.write(Math.round(337.257788)+"<br>");
+
+        //7.ceil() : 무조건 올림
+        document.write(Math.ceil(337.257788)+"<br>");
+    
+        //8. floor() : 무조건 버림
+        document.write(Math.floor(337.257788)+"<br>");
+ 
+        // 9. sqrt() : 루트값을 구해주는 함수
+        document.write(Math.sqrt(9) + "<br>");
+        document.write(Math.sqrt(25) + "<br");
+
+        //10. PI 상수 : 원주율을 구함.
+        document.write(Math.PI + "<br>");
+        
+        
+ 
+    </script>
+
+</body>
+</html>
