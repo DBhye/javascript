@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var userName = prompt("당신의 영문이름은?","");
+    var upperName = userName.toUpperCase();
+    document.write(upperName + "<br>");
+
+    var useNum = prompt("당신의 연락처는?","");
+     //전화번호 뒷자리 4자리를 빼고 추출, 뒤에 4자는 *로 연결
+    //var result = userNum.substring(0,userName.length-4) + "****";
+    var result = useName.substring(0,useNum.length-4).concat("****");
+    document.write(result+"<br>"); 
+</script>
+</body>
+</html>

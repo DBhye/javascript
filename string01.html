@@ -7,60 +7,62 @@
 </head>
 <body>
     <script>
-        // 문자열 객체 사용
+        //문자열 객체 사용
         var s1 = "Hello Javascript World! Javascript";
 
-        // 1. charAt() : 인덱스에 해당하는 한 문자를 출력
-        document.write(s1.charAt(6)+"<br>");
+        // 8. substr(a, b): a번째 인덱스부터 b개의 문자열 추출
+        var s2 = s1.substr(17, 6);
+        document.write(s2 + "<br>");
 
-        // 2. indexOf() : 문자(문자열)에 해당하는 인덱스번호를 출력
-        // 해당하는 문자가 없을 때는 -1을 리턴
-        document.write(s1.indexOf("J")+"<br>");
-        document.write(s1.indexOf("Java")+"<br>");
-        document.write(s1.indexOf("java")+"<br>"); // 해당하는 문자가 없을 때는 -1을 리턴
+        // 9. split() : 문자열에 특정문자(구분자)를 기준으로 나누어 배열로 저장
+        var animals = "lion/tiger/bear/eagle/elephant/hippo/blackyak";
+        var arr = animals.split("/");
 
-        // 3. lastIndexOf() : 문자(문자열)에 해당하는 마지막 인덱스번호를 출력
-        document.write(s1.lastIndexOf("J")+"<br>"); 
+        // 출력 1
+        for(var i=0; i<arr.length; i++) {
+            document.write(arr[i]+" ");
+        }
+        document.write("<br>");
 
-        // 4. match() : 제일 먼저 찾은 문자열을 출력
-        // 찾는 문자열이 없을 경우에는 null을 출력
-        document.write(s1.match("Javascript")+"<br>"); // 첫번째로 찾은 문자열
-        document.write(s1.match("html")+"<br>");
+        // 출력 2
+        for(var i in arr) {
+            document.write(arr[i]+" ");
+        }
+        document.write("<br>");
 
-        // 5. replace() : 제일 먼저 찾은 문자열을 새로운 문자열로 바꿔서 문자열을 생성
-        // s1.replace("Javascript", "HTML"); // 대입하지 않으면 s1이 변경되지 않음
-        s1 = s1.replace("Javascript", "HTML"); // 대입해서 s1이 변경됨
-        document.write(s1+"<br>");
+        // 10. toLowerCase(): 모든 문자를 소문자로 변경
+        var s3 = s1.toLocaleLowerCase();
+        document.write(s3 + "<br>");
 
-        s1 = s1.replace("HTML", "Javascript");
-        document.write(s1+"<br>");
+        // 11. toUpperCase(): 모든 문자를 대문자로 변경
+        var s4 = s1.toUpperCase();
+        document.write(s4 + "<br>");
 
-        // 5. search() : 찾는 문자열과 제일 먼저 일치하는 인덱스 번호를 출력
-        document.write(s1.search("Javascript,,")+"<br>");
+        // 12. length: 문자열의 길이를 알려주는 상수
+        document.write("s1의 길이: "+s1.length+"<br>");
 
+        // 13. concat(): 문자열을 연결하는 메소드
+        var s5 = "자바스크립트";
+        var s6 = s1.concat(s5);
+        document.write(s6 + "<br>");
 
-    // slice() : 시작번호와 끝번호 앞까지 새로운 문자열을 생성하여 리턴
-    var s2 = s1.slice(17, 22);
-    document.write(s2+"<br>");
-    document.write(s1 + "<br"); 
+        // 14. charCodeAt(): 문자에 해당하는 아스키(ASCII)코드값을 반환
+        var s7 = "ABCDEabcde";
+        var n1 = s7.charCodeAt(0); // 대문자 A의 아스키 코드
+        document.write("A의 아스키 코드값: "+n1+"<br>");
+        var n2 = s7.charCodeAt(5); // 소문자 a의 아스키 코드
+        document.write("a의 아스키 코드값: "+n2+"<br>");
 
-    // 7.substring() : 시작번호부터 끝번호 앞까지 문자열을 생성하여 리턴 
-    var s3 = s1. substring(17,23);
-    document.write(s3+"<br>");
-    document.write(s1+"<br>");
-
-    var s5 =s1.substring(24);
-    document.write(s5 + "<br>");
-
-    document.write("<hr>");
-    var s6 = s1.slice(24,-3);
-    document.write(s6 + "<br>");
-    
-    //substring() : 24번부터 -3(음수를 0으로 간주)
-    //24번부터 0번까지 -> 0번부터 24번까지
-    var s7 = s7.slice(24,-3);
-    document.write(s7 + "<br>");
-
-   </script> 
+        // 15. fromCharCode(): 아스키 코드에 해당하는 문자를 반환
+        var n3 = String.fromCharCode(66); // 대문자 A
+        document.write("아스키 코드 66에 해당하는 문자: "+n3+"<br>");
+        var n4 = String.fromCharCode(99); // 소문자 c
+        document.write("아스키 코드 99에 해당하는 문자: "+n4+"<br>");
+        
+        // 16. trim(): 문자열 앞뒤의 공백을 제거
+        var s8 = "     hello     javascript     "
+        s8.trim();
+        document.write(s8+"<br>");
+    </script>
 </body>
 </html>
