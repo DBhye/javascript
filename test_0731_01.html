@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>밀리의 서재</title>
+    <style>
+        .container { width: 500px; margin: 30px auto; background-color: tomato;
+                    text-align: center; padding: 20px;}
+        .book {border: 1px solid black;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>밀리의 서재에서 읽은 책</h1>
+
+    </div>
+    <script>
+        function Book(title, author, volume,price){
+            this.title = title;
+            this.author = author;
+            this.volume = volume;
+            this.price = price;
+
+        }
+
+        var books = [
+        new Book('레미제라블','빅토르위고',300,7000),
+        new Book('노인과바다','어니스트헤밍웨이',100,5000),
+        new Book('오만과편견','제인 오스틴',250,8000),
+        new Book('전쟁과평화','톨스토이',350,9000),
+        new Book('어린왕자','생텍쥐페리',150,6000)
+        ];
+
+         for(var i=0; i<books.length; i++) {
+            document.write('<div class="book">');
+            document.write(books[i].title);
+            document.write('</div>');
+            }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 활용 5</title>
+</head>
+<body>
+    <script>
+        // 객체 생성자 함수
+        function Member(no, name, age) {
+            // 프로퍼티(property)
+            this.no = no;
+            this.name = name;
+            this.age = age;
+
+            // 메소드 - 익명함수를 통해 생성
+            this.showInfo = function() {
+                return "회원번호: " + this.no + ", 이름: " + name + ", 나이: " + age;
+            }
+        }
+
+        var members = [
+            new Member(112233, '이익준', 40),
+            new Member(445566, '김준완', 42),
+            new Member(998754, '채송화', 39),
+            new Member(963258, '양석형', 41),
+            new Member(569823, '안정원', 38),
+        ];
+
+        for(var i=0; i<members.length; i++) {
+            document.write(members[i].showInfo() + "<br>");
+        }
+        //Member 생성자 함수의 메소드의 프로토타입
+        Member.prototype.showInfo = function() {
+            return "회원번호: "+this.no+",이름: " + this.name + ",나이"+ this.age;
+
+
+        }
+      
+    </script>
+</body>
+</html>
