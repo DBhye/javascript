@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function foo() {
+            let color = 'dd'
+            if(true) {
+                color = 'blue'
+            }
+            color = 'red'
+            console.log(`color : ` + color)
+        }
+        //스코프 살아있는건 함수단위.
+        //선언하는 위치가 중요
+        foo()
+    </script>
+</body>
+</html>
