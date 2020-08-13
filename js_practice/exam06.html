@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        Array.prototype.arr = [] //prototype = 공용메모리. (프로토타입에 연결해둔 것을 자동적으로 사용할수있게 연결)
+        Array.prototype.forEach2 = function(fn) {
+            for(var i=0; i<this.arr.legnth; i++) {
+                console.log(arr[i])
+                fn(item)
+            }
+        }
+        //모든 Array에 arr이 생성됨.
+        //모든 Array에 forEach가 생성됨
+        var arr = new Array()
+        objArr.arr = ['A', 'B', 'C']
+
+        objArr.forEach2(function(a) {
+            alert(a)
+        })
+       
+    </script>
+</body>
+</html>
